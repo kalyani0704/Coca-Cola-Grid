@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap');
+
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb{
+    background: #ff0000;
+    border-radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    color: white;
+}
+
+body {
+    background: #000;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding: 20px 30px;
+    background: #fff;
+    align-items: center;
+}
+
+.nav-grid .brand-logo img {
+    width: 100px;
+}
+
+.links {
+    justify-self: end;
+}
+
+.links a {
+    /* display: inline-block; */
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+
+}
+
+.links a:hover {
+    transition: .4s;
+    border-bottom: 2px solid red;
+}
+
+.btn {
+    background: black;
+    color: white !important;
+    padding: 7px 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: red !important;
+}
+
+.middle-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.mid-section {
+    position: relative;
+    max-width: 100%;
+    padding: 20px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+}
+
+.mid-brand-img {
+    position: absolute;
+    width: 50vw;
+    filter: contrast(1), brightness(-5);
+}
+
+.mid-prod-img {
+    position: absolute;
+    top: -10px;
+    width: 200px;
+    filter: contrast(1), brightness(-10);
+}
+
+.mid-text {
+    text-align: center;
+}
+
+.mid-text h2,
+span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.mid-text h2 span {
+    color: red;
+}
+
+.mid-text p {
+    display: block;
+    margin: 0 auto 20px;
+    width: 70%;
+}
+
+.mid-text .btn {
+    border: 2px solid red;
+    padding: 7px 30px;
+    margin: 10px 0;
+}
+
+.ads {
+    margin: 50px 0;
+    background: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mid-logo {
+    width: 150px;
+}
+
+.ads p {
+    color: black !important;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.lower-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lower-grid h2 {
+    font-size: 35px;
+    margin: 30px 0;
+}
+
+.product-grid {
+    margin: 20px;
+    max-width: 60%;
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    align-items: stretch;
+    grid-template-areas:
+        'big-first big-first small-one small-two'
+        'big-first big-first small-three small-four'
+        'small-five small-six big-last big-last'
+        'small-seven small-eight big-last big-last';
+    gap: 20px;
+}
+
+.product-grid .grid-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.big-first {
+    grid-area: big-first;
+}
+
+.big-last {
+    grid-area: big-last;
+}
+
+.small-one {
+    grid-area: small-one;
+}
+
+.small-two {
+    grid-area: small-two;
+}
+
+.small-three {
+    grid-area: small-three;
+}
+
+.small-four {
+    grid-area: small-four;
+}
+
+.small-five {
+    grid-area: small-five;
+}
+
+.small-six {
+    grid-area: small-six;
+}
+
+.small-seven {
+    grid-area: small-seven;
+}
+
+.small-eight {
+    grid-area: small-eight;
+}
+
+footer {
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer h3 {
+    color: #000 !important;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Mobile */
+
+@media screen and (max-width:767px) {
+    .nav-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .mid-section {
+        min-height: 50vh;
+        top: 35%;
+    }
+
+    .mid-brand-img {
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .mid-prod-img {
+        width: 100px;
+    }
+
+    .mid-text h2,
+    span {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    .mid-text p {
+        width: 100%;
+        text-align: left;
+        padding: 20px 10px;
+        line-height: 1.5;
+    }
+
+    .mid-text .btn {
+        display: inline-block;
+        margin: 20px;
+        width: 80%;
+    }
+
+    .ads {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .ads p {
+        font-size: 16px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .lower-grid h2 {
+        font-size: 25px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .product-grid {
+        max-width: 100%;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'big-first big-first big-first big-first'
+            'small-one small-one small-one small-one'
+            'small-two small-two small-two small-two'
+            'small-three small-three small-three small-three'
+            'small-four small-four small-four small-four'
+            'small-five small-five small-five small-five'
+            'small-six small-six small-six small-six'
+            'small-seven small-seven small-seven small-seven'
+            'small-eight small-eight small-eight small-eight'
+            'big-last big-last big-last big-last'
+        ;
+    }
+
+    .product-grid .grid-img {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+
+@media (min-width:768px) and (max-width:1000px) {
+    .mid-section {
+        min-height: 50vh;
+    }
+
+    .mid-brand-img {
+        width: 100vw;
+        padding: 30px;
+    }
+
+    .mid-text {
+        margin: 0 20px;
+    }
+
+    .mid-text h2,
+    span {
+        font-size: 35px;
+    }
+
+    .mid-text p {
+        width: 100%;
+        margin: 0 20px 20px 0;
+    }
+
+    .mid-text .btn {
+        display: inline-block;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .ads {
+        justify-content: center;
+        padding: 20px 0;
+        margin: 30px 0;
+    }
+
+    .ads p {
+        font-size: 17px;
+        margin: 0 20px;
+    }
+
+    .lower-grid h2 {
+        margin: 20px 0;
+    }
+
+    .product-grid {
+        max-width: 90%;
+    }
+}
