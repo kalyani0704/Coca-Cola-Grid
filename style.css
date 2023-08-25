@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap');
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     background: rgb(255, 255, 255);
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #ff0000;
     border-radius: 20px;
 }
@@ -22,12 +23,17 @@ body {
     background: #000;
 }
 
+/* Navbar */
+
 .nav-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
     padding: 20px 30px;
     background: #fff;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-grid .brand-logo img {
@@ -65,6 +71,8 @@ body {
 .btn:hover {
     color: red !important;
 }
+
+/* Middle Section */
 
 .middle-grid {
     display: grid;
@@ -123,6 +131,8 @@ span {
     margin: 10px 0;
 }
 
+/* Advertisement */
+
 .ads {
     margin: 50px 0;
     background: white;
@@ -141,8 +151,10 @@ span {
     font-size: 20px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-
 }
+
+
+/* Grid Layout (Products) */
 
 .lower-grid {
     display: flex;
